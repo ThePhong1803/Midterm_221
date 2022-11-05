@@ -1,0 +1,1195 @@
+01:05:16 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:11: multiple definition of `TimeOutForKeyPress'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:11: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:12: multiple definition of `TimeOutForKeyHold'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:12: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:29: multiple definition of `buttonPin'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:29: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `initButton':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:32: multiple definition of `initButton'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:32: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `button_reading':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:45: multiple definition of `button_reading'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:45: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `isButtonPressed':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:73: multiple definition of `isButtonPressed'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:73: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `isButtonPressed1s':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:82: multiple definition of `isButtonPressed1s'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:82: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:65: Midterm_project.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+01:05:46 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/button.c:13:17: error: 'NO_OF_BUTTONS' undeclared here (not in a function)
+   13 | int buttonFlags[NO_OF_BUTTONS];
+      |                 ^~~~~~~~~~~~~
+../Core/Src/button.c:16:8: error: unknown type name 'GPIO_PinState'
+   16 | static GPIO_PinState debounceButtonBuffer1[NO_OF_BUTTONS];
+      |        ^~~~~~~~~~~~~
+../Core/Src/button.c:17:8: error: unknown type name 'GPIO_PinState'
+   17 | static GPIO_PinState debounceButtonBuffer2[NO_OF_BUTTONS];
+      |        ^~~~~~~~~~~~~
+../Core/Src/button.c:18:8: error: unknown type name 'GPIO_PinState'
+   18 | static GPIO_PinState debounceButtonBuffer3[NO_OF_BUTTONS];
+      |        ^~~~~~~~~~~~~
+../Core/Src/button.c:19:8: error: unknown type name 'GPIO_PinState'
+   19 | static GPIO_PinState debounceButtonBuffer4[NO_OF_BUTTONS];
+      |        ^~~~~~~~~~~~~
+../Core/Src/button.c:21:8: error: unknown type name 'uint8_t'
+   21 | static uint8_t flagForButtonPress1s[NO_OF_BUTTONS];
+      |        ^~~~~~~
+../Core/Src/button.c:24:8: error: unknown type name 'uint16_t'
+   24 | static uint16_t counterForButtonPress1s[NO_OF_BUTTONS];
+      |        ^~~~~~~~
+../Core/Src/button.c:28:1: error: unknown type name 'uint16_t'
+   28 | uint16_t buttonPin[NO_OF_BUTTONS] = {0x2000, 0x4000, 0x8000};
+      | ^~~~~~~~
+../Core/Src/button.c: In function 'initButton':
+../Core/Src/button.c:34:31: error: 'BUTTON_IS_RELEASED' undeclared (first use in this function)
+   34 |   debounceButtonBuffer1[i]  = BUTTON_IS_RELEASED;
+      |                               ^~~~~~~~~~~~~~~~~~
+../Core/Src/button.c:34:31: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/button.c:38:24: error: 'BUTTON_FLAG_CLEAR' undeclared (first use in this function)
+   38 |   buttonFlags[i]     = BUTTON_FLAG_CLEAR;
+      |                        ^~~~~~~~~~~~~~~~~
+../Core/Src/button.c: In function 'button_reading':
+../Core/Src/button.c:51:30: warning: implicit declaration of function 'HAL_GPIO_ReadPin' [-Wimplicit-function-declaration]
+   51 |   debounceButtonBuffer1[i] = HAL_GPIO_ReadPin(INPUT_PORT, buttonPin[i]);
+      |                              ^~~~~~~~~~~~~~~~
+../Core/Src/button.c:27:20: error: 'GPIOA' undeclared (first use in this function)
+   27 | #define INPUT_PORT GPIOA
+      |                    ^~~~~
+../Core/Src/button.c:51:47: note: in expansion of macro 'INPUT_PORT'
+   51 |   debounceButtonBuffer1[i] = HAL_GPIO_ReadPin(INPUT_PORT, buttonPin[i]);
+      |                                               ^~~~~~~~~~
+../Core/Src/button.c:55:36: error: 'BUTTON_IS_PRESSED' undeclared (first use in this function)
+   55 |     if(debounceButtonBuffer4[i] == BUTTON_IS_PRESSED){
+      |                                    ^~~~~~~~~~~~~~~~~
+../Core/Src/button.c:57:23: error: 'BUTTON_FLAG_SET' undeclared (first use in this function)
+   57 |      buttonFlags[i] = BUTTON_FLAG_SET;
+      |                       ^~~~~~~~~~~~~~~
+../Core/Src/button.c:61:33: error: 'BUTTON_IS_RELEASED' undeclared (first use in this function)
+   61 |      debounceButtonBuffer4[i] = BUTTON_IS_RELEASED;
+      |                                 ^~~~~~~~~~~~~~~~~~
+../Core/Src/button.c:64:37: error: 'DURATION_FOR_AUTO_INCREASING' undeclared (first use in this function)
+   64 |     if(counterForButtonPress1s[i] < DURATION_FOR_AUTO_INCREASING){
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/button.c: In function 'isButtonPressed':
+../Core/Src/button.c:74:27: error: 'BUTTON_FLAG_SET' undeclared (first use in this function)
+   74 |  if(buttonFlags[index] == BUTTON_FLAG_SET){
+      |                           ^~~~~~~~~~~~~~~
+../Core/Src/button.c:76:24: error: 'BUTTON_FLAG_CLEAR' undeclared (first use in this function)
+   76 |   buttonFlags[index] = BUTTON_FLAG_CLEAR;
+      |                        ^~~~~~~~~~~~~~~~~
+../Core/Src/button.c: In function 'isButtonPressed1s':
+../Core/Src/button.c:83:36: error: 'BUTTON_FLAG_SET' undeclared (first use in this function)
+   83 |  if(flagForButtonPress1s[index] == BUTTON_FLAG_SET){
+      |                                    ^~~~~~~~~~~~~~~
+../Core/Src/button.c:85:33: error: 'BUTTON_FLAG_CLEAR' undeclared (first use in this function)
+   85 |   flagForButtonPress1s[index] = BUTTON_FLAG_CLEAR;
+      |                                 ^~~~~~~~~~~~~~~~~
+../Core/Src/button.c: In function 'isButtonPressed':
+../Core/Src/button.c:79:1: warning: control reaches end of non-void function [-Wreturn-type]
+   79 | }
+      | ^
+../Core/Src/button.c: In function 'isButtonPressed1s':
+../Core/Src/button.c:90:1: warning: control reaches end of non-void function [-Wreturn-type]
+   90 | }
+      | ^
+At top level:
+../Core/Src/button.c:24:17: warning: 'counterForButtonPress1s' defined but not used [-Wunused-variable]
+   24 | static uint16_t counterForButtonPress1s[NO_OF_BUTTONS];
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/button.c:21:16: warning: 'flagForButtonPress1s' defined but not used [-Wunused-variable]
+   21 | static uint8_t flagForButtonPress1s[NO_OF_BUTTONS];
+      |                ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/button.c:19:22: warning: 'debounceButtonBuffer4' defined but not used [-Wunused-variable]
+   19 | static GPIO_PinState debounceButtonBuffer4[NO_OF_BUTTONS];
+      |                      ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/button.c:18:22: warning: 'debounceButtonBuffer3' defined but not used [-Wunused-variable]
+   18 | static GPIO_PinState debounceButtonBuffer3[NO_OF_BUTTONS];
+      |                      ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/button.c:17:22: warning: 'debounceButtonBuffer2' defined but not used [-Wunused-variable]
+   17 | static GPIO_PinState debounceButtonBuffer2[NO_OF_BUTTONS];
+      |                      ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/button.c:16:22: warning: 'debounceButtonBuffer1' defined but not used [-Wunused-variable]
+   16 | static GPIO_PinState debounceButtonBuffer1[NO_OF_BUTTONS];
+      |                      ^~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/button.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/Src/main.c:28:
+../Core/Src/button.c:13:17: error: 'NO_OF_BUTTONS' undeclared here (not in a function)
+   13 | int buttonFlags[NO_OF_BUTTONS];
+      |                 ^~~~~~~~~~~~~
+../Core/Src/button.c: In function 'initButton':
+../Core/Src/button.c:34:31: error: 'BUTTON_IS_RELEASED' undeclared (first use in this function)
+   34 |   debounceButtonBuffer1[i]  = BUTTON_IS_RELEASED;
+      |                               ^~~~~~~~~~~~~~~~~~
+../Core/Src/button.c:34:31: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/button.c:38:24: error: 'BUTTON_FLAG_CLEAR' undeclared (first use in this function)
+   38 |   buttonFlags[i]     = BUTTON_FLAG_CLEAR;
+      |                        ^~~~~~~~~~~~~~~~~
+../Core/Src/button.c: In function 'button_reading':
+../Core/Src/button.c:55:36: error: 'BUTTON_IS_PRESSED' undeclared (first use in this function)
+   55 |     if(debounceButtonBuffer4[i] == BUTTON_IS_PRESSED){
+      |                                    ^~~~~~~~~~~~~~~~~
+../Core/Src/button.c:57:23: error: 'BUTTON_FLAG_SET' undeclared (first use in this function)
+   57 |      buttonFlags[i] = BUTTON_FLAG_SET;
+      |                       ^~~~~~~~~~~~~~~
+../Core/Src/button.c:61:33: error: 'BUTTON_IS_RELEASED' undeclared (first use in this function)
+   61 |      debounceButtonBuffer4[i] = BUTTON_IS_RELEASED;
+      |                                 ^~~~~~~~~~~~~~~~~~
+../Core/Src/button.c:64:37: error: 'DURATION_FOR_AUTO_INCREASING' undeclared (first use in this function)
+   64 |     if(counterForButtonPress1s[i] < DURATION_FOR_AUTO_INCREASING){
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/button.c: In function 'isButtonPressed':
+../Core/Src/button.c:74:27: error: 'BUTTON_FLAG_SET' undeclared (first use in this function)
+   74 |  if(buttonFlags[index] == BUTTON_FLAG_SET){
+      |                           ^~~~~~~~~~~~~~~
+../Core/Src/button.c:76:24: error: 'BUTTON_FLAG_CLEAR' undeclared (first use in this function)
+   76 |   buttonFlags[index] = BUTTON_FLAG_CLEAR;
+      |                        ^~~~~~~~~~~~~~~~~
+../Core/Src/button.c: In function 'isButtonPressed1s':
+../Core/Src/button.c:83:36: error: 'BUTTON_FLAG_SET' undeclared (first use in this function)
+   83 |  if(flagForButtonPress1s[index] == BUTTON_FLAG_SET){
+      |                                    ^~~~~~~~~~~~~~~
+../Core/Src/button.c:85:33: error: 'BUTTON_FLAG_CLEAR' undeclared (first use in this function)
+   85 |   flagForButtonPress1s[index] = BUTTON_FLAG_CLEAR;
+      |                                 ^~~~~~~~~~~~~~~~~
+../Core/Src/button.c: In function 'isButtonPressed':
+../Core/Src/button.c:79:1: warning: control reaches end of non-void function [-Wreturn-type]
+   79 | }
+      | ^
+../Core/Src/button.c: In function 'isButtonPressed1s':
+../Core/Src/button.c:90:1: warning: control reaches end of non-void function [-Wreturn-type]
+   90 | }
+      | ^
+At top level:
+../Core/Src/button.c:24:17: warning: 'counterForButtonPress1s' defined but not used [-Wunused-variable]
+   24 | static uint16_t counterForButtonPress1s[NO_OF_BUTTONS];
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/button.c:21:16: warning: 'flagForButtonPress1s' defined but not used [-Wunused-variable]
+   21 | static uint8_t flagForButtonPress1s[NO_OF_BUTTONS];
+      |                ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/button.c:19:22: warning: 'debounceButtonBuffer4' defined but not used [-Wunused-variable]
+   19 | static GPIO_PinState debounceButtonBuffer4[NO_OF_BUTTONS];
+      |                      ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/button.c:18:22: warning: 'debounceButtonBuffer3' defined but not used [-Wunused-variable]
+   18 | static GPIO_PinState debounceButtonBuffer3[NO_OF_BUTTONS];
+      |                      ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/button.c:17:22: warning: 'debounceButtonBuffer2' defined but not used [-Wunused-variable]
+   17 | static GPIO_PinState debounceButtonBuffer2[NO_OF_BUTTONS];
+      |                      ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/button.c:16:22: warning: 'debounceButtonBuffer1' defined but not used [-Wunused-variable]
+   16 | static GPIO_PinState debounceButtonBuffer1[NO_OF_BUTTONS];
+      |                      ^~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+01:07:43 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:11: multiple definition of `TimeOutForKeyPress'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:11: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:12: multiple definition of `TimeOutForKeyHold'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:12: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:29: multiple definition of `buttonPin'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:29: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `initButton':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:32: multiple definition of `initButton'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:32: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `button_reading':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:45: multiple definition of `button_reading'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:45: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `isButtonPressed':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:73: multiple definition of `isButtonPressed'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:73: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `isButtonPressed1s':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:82: multiple definition of `isButtonPressed1s'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:82: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:65: Midterm_project.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+01:08:15 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:35: multiple definition of `TimeOutForKeyPress'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:35: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:36: multiple definition of `TimeOutForKeyHold'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:36: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:53: multiple definition of `buttonPin'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:53: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `initButton':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:56: multiple definition of `initButton'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:56: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `button_reading':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:69: multiple definition of `button_reading'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:69: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `isButtonPressed':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:97: multiple definition of `isButtonPressed'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:97: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `isButtonPressed1s':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:106: multiple definition of `isButtonPressed1s'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:106: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:65: Midterm_project.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+01:08:21 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:35: multiple definition of `TimeOutForKeyPress'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:35: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:36: multiple definition of `TimeOutForKeyHold'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:36: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:53: multiple definition of `buttonPin'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:53: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `initButton':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:56: multiple definition of `initButton'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:56: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `button_reading':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:69: multiple definition of `button_reading'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:69: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `isButtonPressed':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:97: multiple definition of `isButtonPressed'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:97: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `isButtonPressed1s':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:106: multiple definition of `isButtonPressed1s'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:106: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:65: Midterm_project.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+01:08:34 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:11: multiple definition of `TimeOutForKeyPress'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:11: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:12: multiple definition of `TimeOutForKeyHold'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:12: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:29: multiple definition of `buttonPin'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:29: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `initButton':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:32: multiple definition of `initButton'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:32: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `button_reading':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:45: multiple definition of `button_reading'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:45: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `isButtonPressed':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:73: multiple definition of `isButtonPressed'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:73: first defined here
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `isButtonPressed1s':
+C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:82: multiple definition of `isButtonPressed1s'; ./Core/Src/button.o:C:/Users/PC/Desktop/project midterm/Midterm_project/Debug/../Core/Src/button.c:82: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:65: Midterm_project.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+01:09:34 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+   text	   data	    bss	    dec	    hex	filename
+   5728	     20	   1644	   7392	   1ce0	Midterm_project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.bin
+ 
+Finished building: Midterm_project.list
+ 
+18:26:58 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o"
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f103c6ux.d" -MT"Core/Startup/startup_stm32f103c6ux.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Startup/startup_stm32f103c6ux.o" "../Core/Startup/startup_stm32f103c6ux.s"
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc "../Core/Src/led7Segment.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led7Segment.d" -MT"Core/Src/led7Segment.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7Segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
+../Core/Src/fsm.c: In function 'fsm_simple_buttons_run':
+../Core/Src/fsm.c:12:10: error: 'status' undeclared (first use in this function)
+   12 |  switch (status){
+      |          ^~~~~~
+../Core/Src/fsm.c:12:10: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/fsm.c:13:8: error: 'ILDE' undeclared (first use in this function)
+   13 |   case ILDE:
+      |        ^~~~
+../Core/Src/fsm.c:14:7: error: 'counter' undeclared (first use in this function)
+   14 |    if(counter != 0) {
+      |       ^~~~~~~
+../Core/Src/fsm.c:15:14: error: 'COUNT_DOWN' undeclared (first use in this function)
+   15 |     status = COUNT_DOWN;
+      |              ^~~~~~~~~~
+../Core/Src/fsm.c:16:5: warning: implicit declaration of function 'setTimer1' [-Wimplicit-function-declaration]
+   16 |     setTimer1(100);
+      |     ^~~~~~~~~
+../Core/Src/fsm.c:20:7: warning: implicit declaration of function 'isTimer1Expired' [-Wimplicit-function-declaration]
+   20 |    if(isTimer1Expired()){
+      |       ^~~~~~~~~~~~~~~
+../Core/Src/fsm.c:22:31: error: 'IDLE' undeclared (first use in this function)
+   22 |     if(counter == 0) status = IDLE;
+      |                               ^~~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/fsm.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/global.c:13:14: error: 'INIT' undeclared here (not in a function)
+   13 | int status = INIT;
+      |              ^~~~
+../Core/Src/led7Segment.c: In function 'update7Segment':
+../Core/Src/led7Segment.c:102:5: warning: implicit declaration of function 'isTimer0Expired' [-Wimplicit-function-declaration]
+  102 |  if(isTimer0Expired()){
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/led7Segment.c:104:3: warning: implicit declaration of function 'setTimer0' [-Wimplicit-function-declaration]
+  104 |   setTimer0(100);
+      |   ^~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:96:21: error: 'RED1_GPIO_Port' undeclared (first use in this function); did you mean 'g_GPIO_Port'?
+   96 |   HAL_GPIO_WritePin(RED1_GPIO_Port, RED1_Pin, SET);
+      |                     ^~~~~~~~~~~~~~
+      |                     g_GPIO_Port
+../Core/Src/main.c:96:21: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:96:37: error: 'RED1_Pin' undeclared (first use in this function)
+   96 |   HAL_GPIO_WritePin(RED1_GPIO_Port, RED1_Pin, SET);
+      |                                     ^~~~~~~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/global.o] Error 1
+../Core/Src/main.c:97:21: error: 'YELLOW1_GPIO_Port' undeclared (first use in this function)
+   97 |   HAL_GPIO_WritePin(YELLOW1_GPIO_Port, YELLOW1_Pin, SET);
+      |                     ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:97:40: error: 'YELLOW1_Pin' undeclared (first use in this function)
+   97 |   HAL_GPIO_WritePin(YELLOW1_GPIO_Port, YELLOW1_Pin, SET);
+      |                                        ^~~~~~~~~~~
+../Core/Src/main.c:98:21: error: 'GREEN1_GPIO_Port' undeclared (first use in this function); did you mean 'g_GPIO_Port'?
+   98 |   HAL_GPIO_WritePin(GREEN1_GPIO_Port, GREEN1_Pin, SET);
+      |                     ^~~~~~~~~~~~~~~~
+      |                     g_GPIO_Port
+../Core/Src/main.c:98:39: error: 'GREEN1_Pin' undeclared (first use in this function)
+   98 |   HAL_GPIO_WritePin(GREEN1_GPIO_Port, GREEN1_Pin, SET);
+      |                                       ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+18:27:22 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
+arm-none-eabi-gcc "../Core/Src/traffic_light.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/traffic_light.d" -MT"Core/Src/traffic_light.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/traffic_light.o"
+../Core/Src/fsm.c: In function 'fsm_simple_buttons_run':
+../Core/Src/fsm.c:12:10: error: 'status' undeclared (first use in this function)
+   12 |  switch (status){
+      |          ^~~~~~
+../Core/Src/fsm.c:12:10: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/fsm.c:13:8: error: 'ILDE' undeclared (first use in this function)
+   13 |   case ILDE:
+      |        ^~~~
+../Core/Src/fsm.c:14:7: error: 'counter' undeclared (first use in this function)
+   14 |    if(counter != 0) {
+      |       ^~~~~~~
+../Core/Src/fsm.c:15:14: error: 'COUNT_DOWN' undeclared (first use in this function)
+   15 |     status = COUNT_DOWN;
+      |              ^~~~~~~~~~
+../Core/Src/fsm.c:16:5: warning: implicit declaration of function 'setTimer1' [-Wimplicit-function-declaration]
+   16 |     setTimer1(100);
+      |     ^~~~~~~~~
+../Core/Src/fsm.c:20:7: warning: implicit declaration of function 'isTimer1Expired' [-Wimplicit-function-declaration]
+   20 |    if(isTimer1Expired()){
+      |       ^~~~~~~~~~~~~~~
+../Core/Src/fsm.c:22:31: error: 'IDLE' undeclared (first use in this function)
+   22 |     if(counter == 0) status = IDLE;
+      |                               ^~~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/fsm.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/global.c:15:1: error: expected ',' or ';' before 'int'
+   15 | int counter = 9;
+      | ^~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/global.o] Error 1
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:96:21: error: 'RED1_GPIO_Port' undeclared (first use in this function); did you mean 'g_GPIO_Port'?
+   96 |   HAL_GPIO_WritePin(RED1_GPIO_Port, RED1_Pin, SET);
+      |                     ^~~~~~~~~~~~~~
+      |                     g_GPIO_Port
+../Core/Src/main.c:96:21: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:96:37: error: 'RED1_Pin' undeclared (first use in this function)
+   96 |   HAL_GPIO_WritePin(RED1_GPIO_Port, RED1_Pin, SET);
+      |                                     ^~~~~~~~
+../Core/Src/main.c:97:21: error: 'YELLOW1_GPIO_Port' undeclared (first use in this function)
+   97 |   HAL_GPIO_WritePin(YELLOW1_GPIO_Port, YELLOW1_Pin, SET);
+      |                     ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:97:40: error: 'YELLOW1_Pin' undeclared (first use in this function)
+   97 |   HAL_GPIO_WritePin(YELLOW1_GPIO_Port, YELLOW1_Pin, SET);
+      |                                        ^~~~~~~~~~~
+../Core/Src/main.c:98:21: error: 'GREEN1_GPIO_Port' undeclared (first use in this function); did you mean 'g_GPIO_Port'?
+   98 |   HAL_GPIO_WritePin(GREEN1_GPIO_Port, GREEN1_Pin, SET);
+      |                     ^~~~~~~~~~~~~~~~
+      |                     g_GPIO_Port
+../Core/Src/main.c:98:39: error: 'GREEN1_Pin' undeclared (first use in this function)
+   98 |   HAL_GPIO_WritePin(GREEN1_GPIO_Port, GREEN1_Pin, SET);
+      |                                       ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+18:27:57 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/fsm.c: In function 'fsm_simple_buttons_run':
+../Core/Src/fsm.c:12:10: error: 'status' undeclared (first use in this function)
+   12 |  switch (status){
+      |          ^~~~~~
+../Core/Src/fsm.c:12:10: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/fsm.c:13:8: error: 'ILDE' undeclared (first use in this function)
+   13 |   case ILDE:
+      |        ^~~~
+../Core/Src/fsm.c:14:7: error: 'counter' undeclared (first use in this function)
+   14 |    if(counter != 0) {
+      |       ^~~~~~~
+../Core/Src/fsm.c:15:14: error: 'COUNT_DOWN' undeclared (first use in this function)
+   15 |     status = COUNT_DOWN;
+      |              ^~~~~~~~~~
+../Core/Src/fsm.c:16:5: warning: implicit declaration of function 'setTimer1' [-Wimplicit-function-declaration]
+   16 |     setTimer1(100);
+      |     ^~~~~~~~~
+../Core/Src/fsm.c:20:7: warning: implicit declaration of function 'isTimer1Expired' [-Wimplicit-function-declaration]
+   20 |    if(isTimer1Expired()){
+      |       ^~~~~~~~~~~~~~~
+../Core/Src/fsm.c:22:31: error: 'IDLE' undeclared (first use in this function)
+   22 |     if(counter == 0) status = IDLE;
+      |                               ^~~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/fsm.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/global.c:15:1: error: expected ',' or ';' before 'int'
+   15 | int counter = 9;
+      | ^~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/global.o] Error 1
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:102:4: warning: implicit declaration of function 'fsm_simple_buttons_run' [-Wimplicit-function-declaration]
+  102 |    fsm_simple_buttons_run();
+      |    ^~~~~~~~~~~~~~~~~~~~~~
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+18:28:42 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/fsm.c: In function 'fsm_simple_buttons_run':
+../Core/Src/fsm.c:12:10: error: 'status' undeclared (first use in this function)
+   12 |  switch (status){
+      |          ^~~~~~
+../Core/Src/fsm.c:12:10: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/fsm.c:13:8: error: 'ILDE' undeclared (first use in this function)
+   13 |   case ILDE:
+      |        ^~~~
+../Core/Src/fsm.c:14:7: error: 'counter' undeclared (first use in this function)
+   14 |    if(counter != 0) {
+      |       ^~~~~~~
+../Core/Src/fsm.c:15:14: error: 'COUNT_DOWN' undeclared (first use in this function)
+   15 |     status = COUNT_DOWN;
+      |              ^~~~~~~~~~
+../Core/Src/fsm.c:16:5: warning: implicit declaration of function 'setTimer1' [-Wimplicit-function-declaration]
+   16 |     setTimer1(100);
+      |     ^~~~~~~~~
+../Core/Src/fsm.c:20:7: warning: implicit declaration of function 'isTimer1Expired' [-Wimplicit-function-declaration]
+   20 |    if(isTimer1Expired()){
+      |       ^~~~~~~~~~~~~~~
+../Core/Src/fsm.c:22:31: error: 'IDLE' undeclared (first use in this function)
+   22 |     if(counter == 0) status = IDLE;
+      |                               ^~~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/fsm.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/global.c:15:1: error: expected ',' or ';' before 'int'
+   15 | int counter = 9;
+      | ^~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/global.o] Error 1
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:104:4: warning: implicit declaration of function 'fsm_simple_buttons_run' [-Wimplicit-function-declaration]
+  104 |    fsm_simple_buttons_run();
+      |    ^~~~~~~~~~~~~~~~~~~~~~
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+18:29:05 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/fsm.c: In function 'fsm_simple_buttons_run':
+../Core/Src/fsm.c:12:10: error: 'status' undeclared (first use in this function)
+   12 |  switch (status){
+      |          ^~~~~~
+../Core/Src/fsm.c:12:10: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/fsm.c:13:8: error: 'ILDE' undeclared (first use in this function)
+   13 |   case ILDE:
+      |        ^~~~
+../Core/Src/fsm.c:14:7: error: 'counter' undeclared (first use in this function)
+   14 |    if(counter != 0) {
+      |       ^~~~~~~
+../Core/Src/fsm.c:15:14: error: 'COUNT_DOWN' undeclared (first use in this function)
+   15 |     status = COUNT_DOWN;
+      |              ^~~~~~~~~~
+../Core/Src/fsm.c:16:5: warning: implicit declaration of function 'setTimer1' [-Wimplicit-function-declaration]
+   16 |     setTimer1(100);
+      |     ^~~~~~~~~
+../Core/Src/fsm.c:20:7: warning: implicit declaration of function 'isTimer1Expired' [-Wimplicit-function-declaration]
+   20 |    if(isTimer1Expired()){
+      |       ^~~~~~~~~~~~~~~
+../Core/Src/fsm.c:22:31: error: 'IDLE' undeclared (first use in this function)
+   22 |     if(counter == 0) status = IDLE;
+      |                               ^~~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/fsm.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/global.c:15:1: error: expected ',' or ';' before 'int'
+   15 | int counter = 9;
+      | ^~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/global.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+18:29:27 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+../Core/Src/fsm.c: In function 'fsm_simple_buttons_run':
+../Core/Src/fsm.c:12:10: error: 'status' undeclared (first use in this function)
+   12 |  switch (status){
+      |          ^~~~~~
+../Core/Src/fsm.c:12:10: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/fsm.c:13:8: error: 'ILDE' undeclared (first use in this function)
+   13 |   case ILDE:
+      |        ^~~~
+../Core/Src/fsm.c:14:7: error: 'counter' undeclared (first use in this function)
+   14 |    if(counter != 0) {
+      |       ^~~~~~~
+../Core/Src/fsm.c:15:14: error: 'COUNT_DOWN' undeclared (first use in this function)
+   15 |     status = COUNT_DOWN;
+      |              ^~~~~~~~~~
+../Core/Src/fsm.c:16:5: warning: implicit declaration of function 'setTimer1' [-Wimplicit-function-declaration]
+   16 |     setTimer1(100);
+      |     ^~~~~~~~~
+../Core/Src/fsm.c:20:7: warning: implicit declaration of function 'isTimer1Expired' [-Wimplicit-function-declaration]
+   20 |    if(isTimer1Expired()){
+      |       ^~~~~~~~~~~~~~~
+../Core/Src/fsm.c:22:31: error: 'IDLE' undeclared (first use in this function)
+   22 |     if(counter == 0) status = IDLE;
+      |                               ^~~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/fsm.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+18:30:17 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc "../Core/Src/led7Segment.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led7Segment.d" -MT"Core/Src/led7Segment.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7Segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/fsm.c: In function 'fsm_simple_buttons_run':
+../Core/Src/fsm.c:13:8: error: 'ILDE' undeclared (first use in this function); did you mean 'IDLE'?
+   13 |   case ILDE:
+      |        ^~~~
+      |        IDLE
+../Core/Src/fsm.c:13:8: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:52: Core/Src/fsm.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+18:30:27 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7952	     32	   1728	   9712	   25f0	Midterm_project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.list
+Finished building: Midterm_project.bin
+Finished building: Midterm_project.hex
+ 
+ 
+ 
+18:31:50 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:106:4: warning: implicit declaration of function 'update7Segment' [-Wimplicit-function-declaration]
+  106 |    update7Segment();
+      |    ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+   text	   data	    bss	    dec	    hex	filename
+   8376	     32	   1728	  10136	   2798	Midterm_project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.hex
+Finished building: Midterm_project.bin
+ 
+ 
+Finished building: Midterm_project.list
+ 
+18:32:00 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8376	     32	   1728	  10136	   2798	Midterm_project.elf
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.hex
+Finished building: Midterm_project.bin
+ 
+ 
+Finished building: Midterm_project.list
+ 
+18:34:17 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+   text	   data	    bss	    dec	    hex	filename
+   8380	     32	   1728	  10140	   279c	Midterm_project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.hex
+Finished building: Midterm_project.bin
+ 
+ 
+Finished building: Midterm_project.list
+ 
+18:34:45 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+   text	   data	    bss	    dec	    hex	filename
+   8380	     32	   1728	  10140	   279c	Midterm_project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.hex
+Finished building: Midterm_project.bin
+ 
+ 
+Finished building: Midterm_project.list
+ 
+18:43:29 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc "../Core/Src/led7Segment.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led7Segment.d" -MT"Core/Src/led7Segment.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7Segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/button.c: In function 'isButtonPressed':
+../Core/Src/button.c:159:46: error: 'buttonWaitDoublePress' undeclared (first use in this function)
+  159 |  if(buttonFlags[index] == BUTTON_FLAG_SET && buttonWaitDoublePress[index] == 0){
+      |                                              ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/button.c:159:46: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/button.c: In function 'isButtonDoublePressed':
+../Core/Src/button.c:177:5: error: 'flagForButtonDoublePressed' undeclared (first use in this function); did you mean 'isButtonDoublePressed'?
+  177 |  if(flagForButtonDoublePressed[index] == BUTTON_FLAG_SET){
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |     isButtonDoublePressed
+../Core/Src/button.c: In function 'isButtonPressed':
+../Core/Src/button.c:164:1: warning: control reaches end of non-void function [-Wreturn-type]
+  164 | }
+      | ^
+../Core/Src/button.c: In function 'isButtonDoublePressed':
+../Core/Src/button.c:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+  182 | }
+      | ^
+make: *** [Core/Src/subdir.mk:52: Core/Src/button.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+18:45:02 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+   text	   data	    bss	    dec	    hex	filename
+   8204	     36	   1740	   9980	   26fc	Midterm_project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.hex
+Finished building: Midterm_project.bin
+ 
+ 
+Finished building: Midterm_project.list
+ 
+18:53:38 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc "../Core/Src/led7Segment.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led7Segment.d" -MT"Core/Src/led7Segment.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7Segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/button.c: In function 'button_reading':
+../Core/Src/button.c:134:5: error: expected ';' before '}' token
+  134 |     }
+      |     ^
+make: *** [Core/Src/subdir.mk:52: Core/Src/button.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+18:53:48 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+   text	   data	    bss	    dec	    hex	filename
+   8232	     36	   1740	  10008	   2718	Midterm_project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.hex
+Finished building: Midterm_project.bin
+ 
+ 
+Finished building: Midterm_project.list
+ 
+18:56:43 **** Clean-only build of configuration Debug for project STM32F103C8T6 ****
+make -j12 clean 
+rm -rf  STM32F103C8T6.hex  default.size.stdout  STM32F103C8T6.list  STM32F103C8T6.elf  ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o  ./Core/Startup/startup_stm32f103c8tx.o  ./Core/Src/button.o ./Core/Src/fsm_test_button.o ./Core/Src/global.o ./Core/Src/main.o ./Core/Src/software_timer.o ./Core/Src/stm32f1xx_hal_msp.o ./Core/Src/stm32f1xx_it.o ./Core/Src/syscalls.o ./Core/Src/sysmem.o ./Core/Src/system_stm32f1xx.o  ./Core/Startup/startup_stm32f103c8tx.d  ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d  ./Core/Src/button.d ./Core/Src/fsm_test_button.d ./Core/Src/global.d ./Core/Src/main.d ./Core/Src/software_timer.d ./Core/Src/stm32f1xx_hal_msp.d ./Core/Src/stm32f1xx_it.d ./Core/Src/syscalls.d ./Core/Src/sysmem.d ./Core/Src/system_stm32f1xx.d  STM32F103C8T6.bin  STM32F103C8T6.elf
+ 
+18:56:43 **** Build of configuration Debug for project STM32F103C8T6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o"
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f103c8tx.d" -MT"Core/Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Startup/startup_stm32f103c8tx.o" "../Core/Startup/startup_stm32f103c8tx.s"
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc "../Core/Src/fsm_test_button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_test_button.d" -MT"Core/Src/fsm_test_button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_test_button.o"
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
+../Core/Src/button.c:38:46: warning: excess elements in array initializer
+   38 | uint16_t buttonPin[NO_OF_BUTTONS] = {0x2000, 0x4000, 0x8000};
+      |                                              ^~~~~~
+../Core/Src/button.c:38:46: note: (near initialization for 'buttonPin')
+../Core/Src/button.c:38:54: warning: excess elements in array initializer
+   38 | uint16_t buttonPin[NO_OF_BUTTONS] = {0x2000, 0x4000, 0x8000};
+      |                                                      ^~~~~~
+../Core/Src/button.c:38:54: note: (near initialization for 'buttonPin')
+../Core/Src/button.c: In function 'button_reading':
+../Core/Src/button.c:113:35: error: 'BUTTON_HOLD_TIMEOUT' undeclared (first use in this function); did you mean 'KEY_HOLD_TIMEOUT'?
+  113 |      counterForButtonPress1s[i] = BUTTON_HOLD_TIMEOUT;
+      |                                   ^~~~~~~~~~~~~~~~~~~
+      |                                   KEY_HOLD_TIMEOUT
+../Core/Src/button.c:113:35: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/button.c:131:35: error: 'AUTO_REPEAT_RATE' undeclared (first use in this function)
+  131 |      counterForButtonPress1s[i] = AUTO_REPEAT_RATE;
+      |                                   ^~~~~~~~~~~~~~~~
+arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
+make: *** [Core/Src/subdir.mk:46: Core/Src/button.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+18:56:48 **** Incremental Build of configuration Debug for project STM32F103C8T6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/button.o"
+../Core/Src/button.c:38:46: warning: excess elements in array initializer
+   38 | uint16_t buttonPin[NO_OF_BUTTONS] = {0x2000, 0x4000, 0x8000};
+      |                                              ^~~~~~
+../Core/Src/button.c:38:46: note: (near initialization for 'buttonPin')
+../Core/Src/button.c:38:54: warning: excess elements in array initializer
+   38 | uint16_t buttonPin[NO_OF_BUTTONS] = {0x2000, 0x4000, 0x8000};
+      |                                                      ^~~~~~
+../Core/Src/button.c:38:54: note: (near initialization for 'buttonPin')
+../Core/Src/button.c: In function 'button_reading':
+../Core/Src/button.c:113:35: error: 'BUTTON_HOLD_TIMEOUT' undeclared (first use in this function); did you mean 'KEY_HOLD_TIMEOUT'?
+  113 |      counterForButtonPress1s[i] = BUTTON_HOLD_TIMEOUT;
+      |                                   ^~~~~~~~~~~~~~~~~~~
+      |                                   KEY_HOLD_TIMEOUT
+../Core/Src/button.c:113:35: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/button.c:131:35: error: 'AUTO_REPEAT_RATE' undeclared (first use in this function)
+  131 |      counterForButtonPress1s[i] = AUTO_REPEAT_RATE;
+      |                                   ^~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/button.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+18:57:32 **** Incremental Build of configuration Debug for project STM32F103C8T6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc "../Core/Src/fsm_test_button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm_test_button.d" -MT"Core/Src/fsm_test_button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_test_button.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/button.c:38:46: warning: excess elements in array initializer
+   38 | uint16_t buttonPin[NO_OF_BUTTONS] = {0x2000, 0x4000, 0x8000};
+      |                                              ^~~~~~
+../Core/Src/button.c:38:46: note: (near initialization for 'buttonPin')
+../Core/Src/button.c:38:54: warning: excess elements in array initializer
+   38 | uint16_t buttonPin[NO_OF_BUTTONS] = {0x2000, 0x4000, 0x8000};
+      |                                                      ^~~~~~
+../Core/Src/button.c:38:54: note: (near initialization for 'buttonPin')
+arm-none-eabi-gcc -o "STM32F103C8T6.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\test\STM32F103C8T6\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C8T6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C8T6.elf
+ 
+arm-none-eabi-size   STM32F103C8T6.elf 
+arm-none-eabi-objdump -h -S  STM32F103C8T6.elf  > "STM32F103C8T6.list"
+arm-none-eabi-objcopy  -O ihex  STM32F103C8T6.elf  "STM32F103C8T6.hex"
+   text	   data	    bss	    dec	    hex	filename
+   7904	     24	   1720	   9648	   25b0	STM32F103C8T6.elf
+arm-none-eabi-objcopy  -O binary  STM32F103C8T6.elf  "STM32F103C8T6.bin"
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C8T6.hex
+Finished building: STM32F103C8T6.bin
+ 
+ 
+Finished building: STM32F103C8T6.list
+ 
+18:58:12 **** Incremental Build of configuration Debug for project STM32F103C8T6 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc -o "STM32F103C8T6.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\test\STM32F103C8T6\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C8T6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C8T6.elf
+ 
+arm-none-eabi-size   STM32F103C8T6.elf 
+arm-none-eabi-objdump -h -S  STM32F103C8T6.elf  > "STM32F103C8T6.list"
+arm-none-eabi-objcopy  -O ihex  STM32F103C8T6.elf  "STM32F103C8T6.hex"
+   text	   data	    bss	    dec	    hex	filename
+   7904	     24	   1720	   9648	   25b0	STM32F103C8T6.elf
+arm-none-eabi-objcopy  -O binary  STM32F103C8T6.elf  "STM32F103C8T6.bin"
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C8T6.hex
+Finished building: STM32F103C8T6.bin
+ 
+ 
+Finished building: STM32F103C8T6.list
+ 
+19:16:18 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc "../Core/Src/led7Segment.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led7Segment.d" -MT"Core/Src/led7Segment.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7Segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+   text	   data	    bss	    dec	    hex	filename
+   8688	     36	   1740	  10464	   28e0	Midterm_project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.hex
+Finished building: Midterm_project.bin
+ 
+ 
+Finished building: Midterm_project.list
+ 
+19:22:09 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+   text	   data	    bss	    dec	    hex	filename
+   8776	     36	   1740	  10552	   2938	Midterm_project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.hex
+Finished building: Midterm_project.bin
+ 
+ 
+Finished building: Midterm_project.list
+ 
+19:27:15 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+../Core/Src/fsm.c: In function 'fsm_simple_buttons_run':
+../Core/Src/fsm.c:62:5: warning: implicit declaration of function 'display7SEG1' [-Wimplicit-function-declaration]
+   62 |     display7SEG1(counter);
+      |     ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8788	     36	   1740	  10564	   2944	Midterm_project.elf
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.hex
+Finished building: Midterm_project.bin
+ 
+ 
+Finished building: Midterm_project.list
+ 
+19:28:31 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc "../Core/Src/led7Segment.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led7Segment.d" -MT"Core/Src/led7Segment.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7Segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/led7Segment.c:112:6: error: redefinition of 'update7Segment'
+  112 | void update7Segment(){
+      |      ^~~~~~~~~~~~~~
+../Core/Src/led7Segment.c:102:6: note: previous definition of 'update7Segment' was here
+  102 | void update7Segment(){
+      |      ^~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:52: Core/Src/led7Segment.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/fsm.c: In function 'fsm_simple_buttons_run':
+../Core/Src/fsm.c:62:5: warning: implicit declaration of function 'quickUpdate7Segment' [-Wimplicit-function-declaration]
+   62 |     quickUpdate7Segment();
+      |     ^~~~~~~~~~~~~~~~~~~
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+19:28:39 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/led7Segment.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led7Segment.d" -MT"Core/Src/led7Segment.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7Segment.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8804	     36	   1740	  10580	   2954	Midterm_project.elf
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.bin
+Finished building: Midterm_project.hex
+ 
+ 
+Finished building: Midterm_project.list
+ 
+19:29:55 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+../Core/Src/fsm.c: In function 'fsm_simple_buttons_run':
+../Core/Src/fsm.c:65:5: warning: implicit declaration of function 'quickUpdate7Segment' [-Wimplicit-function-declaration]
+   65 |     quickUpdate7Segment();
+      |     ^~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8840	     36	   1740	  10616	   2978	Midterm_project.elf
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.hex
+Finished building: Midterm_project.bin
+ 
+ 
+Finished building: Midterm_project.list
+ 
+19:30:52 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc "../Core/Src/led7Segment.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/led7Segment.d" -MT"Core/Src/led7Segment.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7Segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8840	     36	   1740	  10616	   2978	Midterm_project.elf
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.hex
+Finished building: Midterm_project.bin
+ 
+ 
+Finished building: Midterm_project.list
+ 
+19:32:13 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8840	     36	   1740	  10616	   2978	Midterm_project.elf
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.hex
+Finished building: Midterm_project.bin
+ 
+ 
+Finished building: Midterm_project.list
+ 
+19:32:52 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8804	     36	   1740	  10580	   2954	Midterm_project.elf
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.hex
+Finished building: Midterm_project.bin
+ 
+ 
+Finished building: Midterm_project.list
+ 
+19:35:00 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+   text	   data	    bss	    dec	    hex	filename
+   8836	     36	   1740	  10612	   2974	Midterm_project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.hex
+Finished building: Midterm_project.bin
+ 
+ 
+Finished building: Midterm_project.list
+ 
+19:35:41 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+../Core/Src/fsm.c: In function 'fsm_simple_buttons_run':
+../Core/Src/fsm.c:118:26: error: expected ';' before '}' token
+  118 |     quickUpdate7Segment()
+      |                          ^
+      |                          ;
+  119 |    }
+      |    ~                      
+make: *** [Core/Src/subdir.mk:52: Core/Src/fsm.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+19:35:55 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+   text	   data	    bss	    dec	    hex	filename
+   8848	     36	   1740	  10624	   2980	Midterm_project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.hex
+Finished building: Midterm_project.bin
+ 
+ 
+Finished building: Midterm_project.list
+ 
+19:39:07 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+   text	   data	    bss	    dec	    hex	filename
+   8848	     36	   1740	  10624	   2980	Midterm_project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.hex
+Finished building: Midterm_project.bin
+ 
+ 
+Finished building: Midterm_project.list
+ 
+19:43:43 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+   text	   data	    bss	    dec	    hex	filename
+   8872	     36	   1740	  10648	   2998	Midterm_project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.hex
+Finished building: Midterm_project.bin
+ 
+ 
+Finished building: Midterm_project.list
+ 
+19:48:06 **** Incremental Build of configuration Debug for project Midterm_project ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Midterm_project.elf
+ 
+arm-none-eabi-size   Midterm_project.elf 
+arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
+arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
+arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
+   text	   data	    bss	    dec	    hex	filename
+   8872	     36	   1740	  10648	   2998	Midterm_project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Midterm_project.hex
+Finished building: Midterm_project.bin
+ 
+ 
+Finished building: Midterm_project.list
+ 

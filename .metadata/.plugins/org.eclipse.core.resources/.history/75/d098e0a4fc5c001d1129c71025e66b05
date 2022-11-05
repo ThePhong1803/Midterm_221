@@ -1,0 +1,20 @@
+/*
+ * fsm.c
+ *
+ *  Created on: Nov 5, 2022
+ *      Author: PC
+ */
+
+
+#include "fsm.h"
+
+void fsm_simple_buttons_run(){
+	switch (status){
+		case ILDE:
+			break;
+		case COUNT_DOWN:
+			break;
+		default:
+			break;
+	}
+}

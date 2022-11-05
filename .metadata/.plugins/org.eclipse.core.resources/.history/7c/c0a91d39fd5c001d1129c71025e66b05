@@ -1,0 +1,21 @@
+/*
+ * global.h
+ *
+ *  Created on: Nov 3, 2022
+ *      Author: PC
+ */
+
+#ifndef INC_GLOBAL_H_
+#define INC_GLOBAL_H_
+
+#include "main.h"
+
+//global define
+#define IDLE 		1
+#define COUNT_DOWN 	2
+
+//global declaration
+extern int status;
+extern int counter;
+
+#endif /* INC_GLOBAL_H_ */

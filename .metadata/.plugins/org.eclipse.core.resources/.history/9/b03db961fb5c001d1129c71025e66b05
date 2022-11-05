@@ -1,0 +1,14 @@
+/*
+ * global.c
+ *
+ *  Created on: Nov 3, 2022
+ *      Author: PC
+ */
+
+
+#include "global.h"
+
+//global variable implementation
+int status = INIT;
+int counter = 0;
+//global function implementation

@@ -1,0 +1,114 @@
+/*
+ * led7Segment.c
+ *
+ *  Created on: Nov 5, 2022
+ *      Author: PC
+ */
+
+
+#include "led7Segment.h"
+#include "global.h"
+
+//display 7 segment led using low byte of LED7PORT
+void display7SEG1(int num){
+	if(num == 0){
+		LED7PORT -> ODR |= 0x00ff;
+		LED7PORT -> ODR &= 0xff40;
+	}
+	if(num == 1){
+		LED7PORT -> ODR |= 0x00ff;
+		LED7PORT -> ODR &= 0xff79;
+	}
+	if(num == 2){
+		LED7PORT -> ODR |= 0x00ff;
+		LED7PORT -> ODR &= 0xff24;
+	}
+	if(num == 3){
+		LED7PORT -> ODR |= 0x00ff;
+		LED7PORT -> ODR &= 0xff30;
+	}
+	if(num == 4){
+		LED7PORT -> ODR |= 0x00ff;
+		LED7PORT -> ODR &= 0xff19;
+	}
+	if(num == 5){
+		LED7PORT -> ODR |= 0x00ff;
+		LED7PORT -> ODR &= 0xff12;
+	}
+	if(num == 6){
+		LED7PORT -> ODR |= 0x00ff;
+		LED7PORT -> ODR &= 0xff02;
+	}
+	if(num == 7){
+		LED7PORT -> ODR |= 0x00ff;
+		LED7PORT -> ODR &= 0xff78;
+	}
+	if(num == 8){
+		LED7PORT -> ODR |= 0x00ff;
+		LED7PORT -> ODR &= 0xff80;
+	}
+	if(num == 9){
+		LED7PORT -> ODR |= 0x00ff;
+		LED7PORT -> ODR &= 0xff90;
+	}
+}
+
+
+//display 7 segment led using high byte of LED7PORT
+void display7SEG2(int num){
+	if(num == 0){
+		LED7PORT -> ODR |= 0xff00;
+		LED7PORT -> ODR &= 0x40ff;
+	}
+	if(num == 1){
+		LED7PORT -> ODR |= 0xff00;
+		LED7PORT -> ODR &= 0x79ff;
+	}
+	if(num == 2){
+		LED7PORT -> ODR |= 0xff00;
+		LED7PORT -> ODR &= 0x24ff;
+	}
+	if(num == 3){
+		LED7PORT -> ODR |= 0xff00;
+		LED7PORT -> ODR &= 0x30ff;
+	}
+	if(num == 4){
+		LED7PORT -> ODR |= 0xff00;
+		LED7PORT -> ODR &= 0x19ff;
+	}
+	if(num == 5){
+		LED7PORT -> ODR |= 0xff00;
+		LED7PORT -> ODR &= 0x12ff;
+	}
+	if(num == 6){
+		LED7PORT -> ODR |= 0xff00;
+		LED7PORT -> ODR &= 0x02ff;
+	}
+	if(num == 7){
+		LED7PORT -> ODR |= 0xff00;
+		LED7PORT -> ODR &= 0x78ff;
+	}
+	if(num == 8){
+		LED7PORT -> ODR |= 0xff00;
+		LED7PORT -> ODR &= 0x80ff;
+	}
+	if(num == 9){
+		LED7PORT -> ODR |= 0xff00;
+		LED7PORT -> ODR &= 0x90ff;
+	}
+}
+
+//periodic update fuction
+void update7Segment(){
+	if(isTimer0Expired()){
+		//using timer 0, update number every 1 second
+		setTimer0(100);
+		//using the lower part of PORTB
+		display7SEG1(counter);
+	}
+}
+
+//quick response function
+void update7Segment(){
+	display7SEG1(counter);
+}

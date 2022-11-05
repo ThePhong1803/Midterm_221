@@ -1,0 +1,25 @@
+/*
+ * fsm.c
+ *
+ *  Created on: Nov 5, 2022
+ *      Author: PC
+ */
+
+
+#include "fsm.h"
+
+void fsm_simple_buttons_run(){
+	switch (status){
+		case ILDE:
+			if(counter != 0) status = COUNT_DOWN;
+			break;
+		case COUNT_DOWN:
+			if(isTimer1Expired()){
+				counter--;
+				if(counter == 0) status = IDLE;
+			}
+			break;
+		default:
+			break;
+	}
+}
