@@ -1,0 +1,71 @@
+/*
+ * fsm_test_button.c
+ *
+ *  Created on: Nov 4, 2022
+ *      Author: PC
+ */
+
+
+#include "fsm_test_button.h"
+
+void fsm_test_button(){
+	switch(status){
+		case INIT:
+			status = RED;
+			setTimer0(500);
+			break;
+		case RED:
+			HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, RESET);
+			HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, SET);
+			HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, SET);
+			if(isButtonDoublePressed(0)){
+				//change state immediately
+				status = GREEN;
+				clearTimer0();
+				setTimer0(500);	// 1 second
+			}
+
+			if(isTimer0Expired()){
+				//timeout, change state to GREEN
+				status = GREEN;
+				setTimer0(500);	// 1 second
+			}
+			break;
+		case GREEN:
+			HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, SET);
+			HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, RESET);
+			HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, SET);
+			if(isButtonDoublePressed(0)){
+				//change state immediately
+				status = YELLOW;
+				clearTimer0();
+				setTimer0(500);	// 1 second
+			}
+
+			if(isTimer0Expired()){
+				//timeout, change state to GREEN
+				status = YELLOW;
+				setTimer0(500);	// 1 second
+			}
+			break;
+		case YELLOW:
+			HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, SET);
+			HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, SET);
+			HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, RESET);
+			if(isButtonDoublePressed(0)){
+				//change state immediately
+				status = RED;
+				clearTimer0();
+				setTimer0(500);	// 1 second
+			}
+
+			if(isTimer0Expired()){
+				//timeout, change state to GREEN
+				status = RED;
+				setTimer0(500);	// 1 second
+			}
+			break;
+		default:
+			break;
+	}
+}

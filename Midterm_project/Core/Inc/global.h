@@ -18,6 +18,8 @@
 #define COUNT_DOWN 	2
 #define INC			3
 #define DEC			4
+#define INC_HOLD	13
+#define DEC_HOLD	14
 
 //button input macro
 #define BUTTON_RESET 	0
@@ -30,5 +32,7 @@
 //global declaration
 extern int status;
 extern int counter;
+
+void toggleLedRed();
 
 #endif /* INC_GLOBAL_H_ */

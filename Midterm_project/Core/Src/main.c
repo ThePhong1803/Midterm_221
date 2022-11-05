@@ -97,6 +97,9 @@ int main(void)
   initButton();
   //set timer 0 for led update
   setTimer0(1);
+  //initial led red and toggle timer
+  setTimer4(100);
+  HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, RESET);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -104,6 +107,7 @@ int main(void)
   while (1)
   {
 	  fsm_simple_buttons_run();
+	  toggleLedRed();
 	  update7Segment();
     /* USER CODE END WHILE */
 

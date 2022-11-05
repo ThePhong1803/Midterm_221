@@ -1,0 +1,16 @@
+/*
+ * global.c
+ *
+ *  Created on: Nov 4, 2022
+ *      Author: PC
+ */
+
+
+#include "global.h"
+
+//global variable implementation
+//initialize fsm status
+int status = IDLE;
+//initialize counter
+int counter = 0;
+//global function implementation

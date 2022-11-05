@@ -1,0 +1,23 @@
+/*
+ * global.c
+ *
+ *  Created on: Nov 3, 2022
+ *      Author: PC
+ */
+
+
+#include "global.h"
+
+//global variable implementation
+//initialize fsm status
+int status = IDLE;
+//initialize counter
+int counter = 0;
+//global function implementation
+
+void toggleLedRed(){
+	if(isTimer4Expired()){
+		setTimer4(100); //1 second toggle;
+		HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin);
+	}
+}

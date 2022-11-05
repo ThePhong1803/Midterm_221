@@ -31,7 +31,7 @@
 void initButton();
 void button_reading(void);
 unsigned char isButtonPressed(unsigned char index);
-unsigned char isButtonPressed1s(unsigned char index);
+unsigned char isButtonPressed3s(unsigned char index);
 unsigned char isButtonDoublePressed(unsigned char index);
 
 #endif /* INC_BUTTON_H_ */

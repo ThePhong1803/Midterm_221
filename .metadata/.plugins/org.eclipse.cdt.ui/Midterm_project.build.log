@@ -1,6 +1,7 @@
-19:48:06 **** Incremental Build of configuration Debug for project Midterm_project ****
+02:13:27 **** Incremental Build of configuration Debug for project Midterm_project ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/fsm.d" -MT"Core/Src/fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm.o"
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
 arm-none-eabi-gcc -o "Midterm_project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\project midterm\Midterm_project\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Midterm_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Midterm_project.elf
  
@@ -9,15 +10,15 @@ arm-none-eabi-objdump -h -S  Midterm_project.elf  > "Midterm_project.list"
 arm-none-eabi-objcopy  -O ihex  Midterm_project.elf  "Midterm_project.hex"
 arm-none-eabi-objcopy  -O binary  Midterm_project.elf  "Midterm_project.bin"
    text	   data	    bss	    dec	    hex	filename
-   8872	     36	   1740	  10648	   2998	Midterm_project.elf
+  10028	     36	   1740	  11804	   2e1c	Midterm_project.elf
 Finished building: default.size.stdout
  
-Finished building: Midterm_project.hex
 Finished building: Midterm_project.bin
- 
+Finished building: Midterm_project.hex
  
 Finished building: Midterm_project.list
  
+ 
 
-19:48:07 Build Finished. 0 errors, 0 warnings. (took 790ms)
+02:13:28 Build Finished. 0 errors, 0 warnings. (took 633ms)
 
